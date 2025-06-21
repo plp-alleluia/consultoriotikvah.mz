@@ -40,12 +40,12 @@ Para configurar este projeto localmente para desenvolvimento:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/plp-alleuia/tikvahpsycem.mz](https://github.com/plp-alleluia/tikvah-psycem-website.git)
+    https://github.com/plp-alleluia/consultoriotikvah.mz.git
     # Substitua 'plp-alleuia' pelo seu username do GitHub real, se for diferente
     ```
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd tikvah-psycem-website
+    cd tikvahpycem.mz
     ```
 3.  **Abra o arquivo `index.html`:** Simplesmente abra o arquivo `index.html` em seu navegador web preferido para visualizar o site.
 
@@ -70,7 +70,7 @@ Para dúvidas gerais, agendamentos, ou comunicação institucional, a Tikvah Psy
     * **Atendimento Técnico:** `+258 82 759 2980`
     * **Apoio/Informações Operacionais:** `+258 82 892 6020` / `+258 82 778 5043`
     * **Telefone geral (usado no site):** `+258 82 778 5043`
-* **Website:** [www.tikvahpsycem.co.mz](https://www.tikvahpsycem.co.mz)
+* **Website:** [(https://plp-alleluia.github.io/tikvahpsycem.mz] (https://plp-alleluia.github.io/tikvahpsycem.mz))
 
 ### Redes Sociais Oficiais:
 
