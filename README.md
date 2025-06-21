@@ -74,7 +74,7 @@ Para dúvidas gerais, agendamentos, ou comunicação institucional, a Tikvah Psy
     * **Atendimento Técnico:** `+258 82 759 2980`
     * **Apoio/Informações Operacionais:** `+258 82 892 6020` / `+258 82 778 5043`
     * **Telefone geral (usado no site):** `+258 82 778 5043`
-* **Website:** [www.tikvahpsycem.co.mz](https://www.tikvahpsycem.co.mz)
+* **Website:** [Oficina do Psicólogo Moçambique](https://www.facebook.com/consultoriotikvah)
 
 ### Redes Sociais Oficiais:
 
