@@ -40,7 +40,7 @@ Para configurar este projeto localmente para desenvolvimento:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/plp-alleuia/tikvah-psycem-website.git](https://github.com/plp-alleluia/tikvah-psycem-website.git)
+    git clone [https://github.com/plp-alleuia/tikvahpsycem.mz](https://github.com/plp-alleluia/tikvah-psycem-website.git)
     # Substitua 'plp-alleuia' pelo seu username do GitHub real, se for diferente
     ```
 2.  **Navegue até a pasta do projeto:**
@@ -84,6 +84,6 @@ Para dúvidas gerais, agendamentos, ou comunicação institucional, a Tikvah Psy
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a Licença [Nome da Licença, ex: MIT] - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
+Este projeto está licenciado sob a Licença Nome da Licença: MIT_TikvahPsycem - veja o arquivo [LICENSE](LICENSE) para detalhes.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cc9eb9e8-bbcc-420a-a6f4-2c2059e0b9c6/deploy-status)](https://app.netlify.com/projects/consultoriotikvah/deploys)
 ---
