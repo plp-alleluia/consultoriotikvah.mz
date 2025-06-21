@@ -1,7 +1,3 @@
-# tikvah-psycem-website
-Website institucional da Tikvah Psycem para saúde mental e desenvolvimento humano e organizacional.
-
-
 # 🌟 Tikvah Psycem Website
 
 Bem-vindo ao repositório oficial do website institucional da **Tikvah Psycem**, seu parceiro estratégico em Saúde Mental, Desenvolvimento Humano e Organizacional. Este site foi concebido para ser um portal de acesso fácil e intuitivo aos nossos serviços, valores e equipe.
@@ -44,7 +40,7 @@ Para configurar este projeto localmente para desenvolvimento:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/plp-alleuia/consultoriotikvah.mz.git]([(https://github.com/plp-alleuia/consultoriotikvah.mz.git)
+    git clone [https://github.com/plp-alleuia/tikvah-psycem-website.git](https://github.com/plp-alleluia/tikvah-psycem-website.git)
     # Substitua 'plp-alleuia' pelo seu username do GitHub real, se for diferente
     ```
 2.  **Navegue até a pasta do projeto:**
@@ -74,7 +70,7 @@ Para dúvidas gerais, agendamentos, ou comunicação institucional, a Tikvah Psy
     * **Atendimento Técnico:** `+258 82 759 2980`
     * **Apoio/Informações Operacionais:** `+258 82 892 6020` / `+258 82 778 5043`
     * **Telefone geral (usado no site):** `+258 82 778 5043`
-* **Website:** [Oficina do Psicólogo Moçambique](https://www.facebook.com/consultoriotikvah)
+* **Website:** [www.tikvahpsycem.co.mz](https://www.tikvahpsycem.co.mz)
 
 ### Redes Sociais Oficiais:
 
