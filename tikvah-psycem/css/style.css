@@ -1,0 +1,1056 @@
+/* --- Fonte WDXL Lubrifont SC --- */
+/* Certifique-se de que esta fonte está corretamente importada no HTML */
+.wdxl-lubrifont-sc-regular {
+  font-family: "WDXL Lubrifont SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- Variáveis Globais e Reset --- */
+:root {
+  /* Paleta de Cores */
+  --primary-color: #3a5a40; /* Verde escuro principal */
+  --secondary-color: #588157; /* Verde médio, um pouco mais claro */
+  --accent-color: #a3b18a; /* Verde acinzentado claro, para destaques */
+  --light-color: #fdfdfd; /* Branco suave para fundos claros */
+  --dark-color: #1e2f23; /* Verde muito escuro, quase preto, para textos e fundos escuros */
+  --text-color: #333333; /* Cinza escuro para texto principal */
+  --light-gray: #f4f4f4; /* Cinza claro para seções de fundo */
+  --border-color: #cccccc; /* Cor de borda para elementos de formulário */
+
+  /* Fontes */
+  --font-primary: "Montserrat", sans-serif; /* Fonte principal para o corpo do texto */
+  --font-secondary: "Lora", serif; /* Fonte para títulos e cabeçalhos */
+  --font-tertiary: "Playfair Display", serif; /* Fonte opcional para títulos maiores e mais elegantes */
+
+  /* Transições e Sombras */
+  --transition-speed: 0.3s ease-in-out; /* Velocidade padrão para transições */
+  --box-shadow-light: 0 5px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para cards */
+  --box-shadow-dark: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Reset de Estilos Padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+}
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave para âncoras */
+  font-size: 16px; /* Tamanho base da fonte */
+}
+
+body {
+  font-family: var(--font-primary); /* Aplica a fonte principal */
+  color: var(--text-color); /* Cor padrão do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  background-color: var(--light-color); /* Cor de fundo geral */
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* Para leitores de tela apenas (acessibilidade) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Container Comum para Limitar Largura do Conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Padding lateral responsivo */
+}
+
+/* --- Tipografia e Elementos Comuns --- */
+h1,
+h2,
+h3 {
+  font-family: var(
+    --font-secondary
+  ); /* Aplica a fonte secundária para títulos */
+  font-weight: 700; /* Peso da fonte mais forte para títulos */
+  color: var(--dark-color); /* Cor escura para títulos */
+  line-height: 1.2; /* Espaçamento entre linhas mais apertado para títulos */
+}
+
+h1 {
+  font-family: var(--font-tertiary); /* Ou var(--font-secondary) se preferir */
+  font-size: 3.8rem; /* Tamanho maior para o título principal */
+}
+
+h2 {
+  font-size: 2.8rem; /* Tamanho para títulos de seção */
+}
+
+h3 {
+  font-size: 1.8rem; /* Tamanho para subtítulos e títulos de card */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Mais espaço abaixo do título da seção */
+  font-size: 2.8rem; /* Garante que h2 e .section-title tenham o mesmo tamanho base */
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 4rem auto; /* Mais espaço abaixo da introdução da seção */
+  text-align: center;
+  font-size: 1.15rem; /* Um pouco maior para melhor legibilidade */
+  line-height: 1.7;
+  color: #555; /* Cor um pouco mais suave para a intro */
+}
+
+/* Estilos para botões */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem; /* Padding ajustado */
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all var(--transition-speed);
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Estilos de Fundo e Padding --- */
+.bg-light {
+  background-color: var(--light-gray);
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+  color: var(--light-color); /* Garante que o texto principal seja claro */
+}
+
+.bg-dark .section-title,
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3 {
+  color: var(--light-color);
+}
+
+.bg-dark .section-intro {
+  color: var(--accent-color); /* Cor de destaque para intro em fundo escuro */
+}
+
+.section-padding {
+  padding: 6rem 0; /* Padding vertical padrão para seções */
+}
+
+/* --- Header & Navegação --- */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent; /* Fundo transparente inicialmente */
+  padding: 1.5rem 0;
+  transition: background 0.4s ease-out, padding 0.4s ease-out,
+    box-shadow 0.4s ease-out;
+}
+
+.main-header.scrolled {
+  background: rgba(30, 47, 35, 0.98); /* Fundo quase opaco ao rolar */
+  padding: 1rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25); /* Sombra mais proeminente ao rolar */
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 55px; /* Tamanho inicial do logo */
+  transition: height var(--transition-speed);
+}
+
+.main-header.scrolled .logo img {
+  height: 45px; /* Tamanho menor ao rolar */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  margin-left: 2.2rem; /* Mais espaço entre os itens do menu */
+}
+
+.main-nav a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0; /* Adiciona padding vertical */
+  position: relative;
+  transition: color var(--transition-speed);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* Linha de destaque mais grossa */
+  background-color: var(--accent-color);
+  transition: width var(--transition-speed);
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+  width: 100%;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--accent-color); /* Cor do texto ao passar o mouse */
+}
+
+/* Oculta o toggle de navegação em telas maiores */
+.nav-toggle {
+  display: none;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    /* Camada escura mais forte */ url("../img/hero-background.jpg") no-repeat
+      center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--light-color);
+  padding: 2rem; /* Padding para evitar que o conteúdo toque as bordas */
+}
+
+.hero-title {
+  font-size: 4rem; /* Tamanho ainda maior para o hero title */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--light-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto suave */
+}
+
+.hero-subtitle {
+  font-size: 1.4rem; /* Tamanho maior para o subtítulo */
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto; /* Mais espaço abaixo do subtítulo */
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* --- Card Grid (Agendamento e Serviços) --- */
+.card-grid,
+.service-grid,
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Min-width um pouco menor */
+  gap: 2.5rem; /* Aumento do espaço entre cards */
+  margin-top: 3rem; /* Espaçamento com o conteúdo acima */
+}
+
+.card,
+.service-card,
+.team-member {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-light); /* Aplica a variável de sombra */
+  border-left: 6px solid var(--primary-color); /* Borda mais grossa */
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+.card:hover,
+.service-card:hover,
+.team-member:hover {
+  transform: translateY(-8px); /* Efeito de elevação ao passar o mouse */
+  box-shadow: var(--box-shadow-dark); /* Sombra mais escura no hover */
+}
+
+.card-title {
+  font-size: 1.6rem; /* Tamanho ajustado */
+  margin-bottom: 1.2rem;
+  color: var(--dark-color);
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.card ul li {
+  padding: 0.6rem 0;
+  position: relative;
+  padding-left: 30px; /* Mais espaço para o ícone */
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.card ul li::before {
+  content: "✓"; /* Ícone de check */
+  color: var(--secondary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem; /* Tamanho do ícone */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.recommendation {
+  margin-top: 2rem; /* Mais espaço */
+  font-style: italic;
+  color: var(--secondary-color);
+  font-weight: 500;
+  border-top: 1px dashed #eee; /* Linha divisória */
+  padding-top: 1.5rem;
+}
+
+/* --- Processo Section (Tabs & Accordion) --- */
+.process-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid #eee; /* Borda mais grossa e clara */
+  gap: 1rem; /* Espaço entre os botões da aba */
+}
+
+.tab-link {
+  background: none;
+  border: none;
+  padding: 1.2rem 2.5rem; /* Padding ajustado */
+  font-size: 1.3rem; /* Tamanho da fonte maior */
+  cursor: pointer;
+  position: relative;
+  color: #888;
+  transition: all var(--transition-speed);
+  font-weight: 600;
+  outline: none; /* Remove o outline ao focar */
+}
+
+.tab-link:hover:not(.active),
+.tab-link:focus:not(.active) {
+  color: var(--text-color); /* Cor do texto ao passar o mouse */
+}
+
+.tab-link.active {
+  color: var(--primary-color);
+}
+
+.tab-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Posiciona a linha exatamente na borda */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Linha de destaque mais grossa */
+  background: var(--primary-color);
+  border-radius: 2px 2px 0 0; /* Cantos arredondados na linha */
+}
+
+.tab-content {
+  display: none;
+  padding-top: 2rem; /* Espaço entre a aba e o conteúdo */
+}
+.tab-content.active {
+  display: block;
+}
+
+.accordion-item {
+  background: #fff;
+  margin-bottom: 1.2rem; /* Mais espaço entre os itens */
+  border-radius: 8px; /* Cantos mais arredondados */
+  box-shadow: var(--box-shadow-light);
+  overflow: hidden; /* Garante que o conteúdo oculto não vaze */
+}
+
+.accordion-header {
+  width: 100%;
+  background: var(--light-color); /* Fundo claro para o cabeçalho */
+  border: none;
+  text-align: left;
+  padding: 1.5rem 2rem; /* Padding ajustado */
+  font-size: 1.3rem; /* Tamanho da fonte maior */
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark-color);
+  transition: background var(--transition-speed);
+  outline: none; /* Remove o outline ao focar */
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+  background: #f0f0f0; /* Um leve escurecimento no hover */
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 1.8rem; /* Tamanho maior para o ícone */
+  color: var(--primary-color);
+  transition: transform var(--transition-speed);
+}
+
+.accordion-header[aria-expanded="true"]::after {
+  /* Correção: usar atributo ARIA */
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Adiciona transição para padding */
+}
+.accordion-content p {
+  padding: 0 2rem 1.5rem 2rem; /* Padding ajustado */
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+.accordion-content[aria-hidden="false"] {
+  /* Estilo para conteúdo visível */
+  max-height: fit-content; /* Ou um valor grande como 500px, 1000px, etc. */
+  padding-bottom: 1.5rem; /* Garante padding quando expandido */
+}
+
+.process-list {
+  list-style-type: decimal; /* Números para a lista */
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+.process-list li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  line-height: 1.6;
+}
+.process-list strong {
+  color: var(--primary-color);
+}
+
+/* --- New Section: Services --- */
+.services-section {
+  background-color: var(--light-color); /* Fundo padrão ou branco */
+}
+
+.service-card {
+  border-left: 6px solid var(--secondary-color); /* Borda com cor secundária */
+  padding: 2.5rem;
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-card ul li {
+  padding: 0.4rem 0;
+  font-size: 1.05rem;
+  position: relative;
+  padding-left: 25px; /* Espaço para o ícone */
+}
+
+.service-card ul li::before {
+  content: "•"; /* Ponto de lista personalizado */
+  color: var(--accent-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.section-outro {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* --- New Section: Team --- */
+.team-section {
+  background-color: var(--light-gray); /* Fundo cinza claro */
+}
+
+.team-member {
+  text-align: center;
+  border-left: none; /* Remove a borda lateral padrão */
+  padding: 2rem;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Imagem redonda */
+  object-fit: cover; /* Garante que a imagem preencha o círculo */
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--primary-color); /* Borda na imagem */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed);
+}
+
+.team-member:hover img {
+  transform: scale(1.05); /* Pequeno zoom na imagem */
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.team-member .role {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.team-member .bio {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.team-call-to-action {
+  display: block; /* Para centralizar o botão */
+  margin: 3rem auto 0 auto;
+  max-width: fit-content;
+}
+
+/* --- Value Proposition --- */
+.value-proposition {
+  background: var(--secondary-color);
+  color: var(--light-color);
+  padding: 6rem 0; /* Garante o padding da seção */
+  text-align: center; /* Centraliza o texto */
+}
+
+.value-proposition .section-title {
+  color: var(--light-color);
+}
+.value-proposition .section-intro {
+  color: var(--light-color);
+  opacity: 0.9;
+  margin-bottom: 3rem; /* Espaço antes da lista */
+}
+
+.value-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 3rem auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Grid para a lista de valores */
+  gap: 1.5rem 2rem; /* Espaço entre os itens */
+  text-align: left;
+}
+
+.value-list li {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fundo semitransparente para itens */
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-left: 4px solid var(--accent-color); /* Borda de destaque */
+  color: var(--light-color);
+}
+
+.value-list li strong {
+  color: var(--accent-color);
+  display: block; /* Garante que o texto em negrito tenha sua própria linha se necessário */
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.value-proposition .btn-secondary {
+  background: var(--light-color);
+  color: var(--secondary-color);
+  border-color: var(--light-color);
+}
+.value-proposition .btn-secondary:hover,
+.value-proposition .btn-secondary:focus {
+  background: transparent;
+  color: var(--light-color);
+  border-color: var(--light-color);
+}
+
+/* --- Contacto Section --- */
+.contact-info {
+  display: flex;
+  justify-content: center; /* Centraliza os itens de contato */
+  flex-wrap: wrap;
+  gap: 3rem; /* Aumento do espaço entre os itens de contato */
+  margin-top: 3rem;
+  margin-bottom: 4rem; /* Mais espaço antes do formulário */
+}
+.contact-item {
+  text-align: center;
+  color: var(--light-color);
+  flex: 1 1 250px; /* Garante que os itens tenham um tamanho mínimo e cresçam */
+  max-width: 300px; /* Limita a largura máxima para não ficarem muito grandes */
+}
+.contact-item img {
+  height: 50px; /* Ícones maiores */
+  margin-bottom: 1.2rem;
+  filter: brightness(0) invert(1); /* Deixa os ícones brancos em fundo escuro */
+}
+.contact-item p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+.contact-item p:first-of-type {
+  /* Estilo para o número de telefone/email principal */
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* --- Formulário de Contato --- */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Largura máxima maior para o formulário */
+  margin: 0 auto 3rem auto; /* Centraliza e adiciona espaço inferior */
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  margin: 15px 0 8px; /* Mais espaço para labels */
+  color: var(--light-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+input,
+textarea {
+  padding: 12px 15px; /* Padding ajustado */
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px; /* Cantos mais arredondados */
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo claro para campos */
+  color: var(--text-color);
+  transition: border-color var(--transition-speed);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-color); /* Borda de destaque no foco */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(163, 177, 138, 0.3); /* Sombra de foco suave */
+}
+
+textarea {
+  resize: vertical; /* Permite redimensionar apenas verticalmente */
+  min-height: 120px;
+}
+
+form button[type="submit"] {
+  padding: 14px 20px; /* Padding maior para o botão de submit */
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 50px; /* Botão arredondado */
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+  margin-top: 1.5rem;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: #ff6347; /* Tom de vermelho mais suave */
+  margin-top: -10px; /* Ajuste para ficar mais próximo do campo */
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* --- Social Media --- */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 4rem; /* Mais espaço para separar do formulário */
+  flex-wrap: wrap;
+}
+
+.social-media h3 {
+  width: 100%;
+  text-align: center;
+  color: var(--light-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.social-media a {
+  display: inline-block;
+  transition: transform var(--transition-speed);
+  outline: none;
+}
+
+.social-media a img {
+  height: 45px; /* Tamanho dos ícones sociais */
+  filter: brightness(0) invert(1); /* Ícones brancos */
+  transition: transform var(--transition-speed), filter var(--transition-speed);
+}
+
+.social-media a:hover img,
+.social-media a:focus img {
+  transform: scale(1.15); /* Efeito de zoom no hover */
+  filter: brightness(0) invert(1) saturate(5) hue-rotate(80deg); /* Exemplo: Mudar para um tom de verde no hover */
+}
+
+/* --- Footer --- */
+.main-footer {
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 2.5rem 0; /* Padding ajustado */
+  text-align: center;
+}
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que os itens se quebrem em telas menores */
+  gap: 1.5rem; /* Espaço entre os itens no rodapé */
+}
+.main-footer p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-left: 1.8rem; /* Mais espaço entre os links */
+  font-size: 0.95rem;
+  transition: color var(--transition-speed);
+  outline: none;
+}
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #fff;
+  text-decoration: underline; /* Sublinhado no hover */
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 992px) {
+  .section-padding {
+    padding: 4rem 0; /* Reduz padding em telas médias */
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  .section-intro {
+    margin-bottom: 2.5rem;
+  }
+  .main-nav ul li {
+    margin-left: 1.5rem;
+  }
+  .card-grid,
+  .service-grid,
+  .team-grid {
+    gap: 1.5rem;
+  }
+  .process-tabs {
+    flex-wrap: wrap; /* Quebra as abas em várias linhas se necessário */
+    justify-content: center;
+  }
+  .tab-link {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .accordion-header {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+  }
+  .contact-info {
+    gap: 1.5rem;
+  }
+  .contact-item img {
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Base da fonte um pouco menor */
+  }
+  .hero-section {
+    height: 80vh; /* Altura do hero menor em mobile */
+    padding: 1.5rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .section-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .main-header .container {
+    flex-wrap: wrap; /* Permite que o logo e o toggle se quebrem */
+    justify-content: center; /* Centraliza logo e toggle */
+    gap: 1rem;
+  }
+  .logo {
+    flex-grow: 1; /* Permite que o logo ocupe espaço */
+    text-align: center;
+  }
+  .logo img {
+    height: 50px; /* Tamanho do logo ajustado */
+  }
+  .main-header.scrolled .logo img {
+    height: 45px;
+  }
+
+  /* Estilos do Toggle de Navegação para Mobile */
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Garante que o botão fique acima do menu */
+    padding: 10px; /* Área de clique maior */
+  }
+  .nav-toggle .icon-bar {
+    /* Alterado de 'span' para 'icon-bar' para evitar conflitos */
+    display: block;
+    width: 28px; /* Largura da barra */
+    height: 3px; /* Espessura da barra */
+    background: white;
+    margin: 6px 0; /* Espaço entre as barras */
+    transition: all 0.4s ease;
+    border-radius: 2px;
+  }
+  /* Animação do ícone de hambúrguer para 'X' */
+  .nav-toggle.active .icon-bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  .nav-toggle.active .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active .icon-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Menu de Navegação para Mobile */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Começa fora da tela */
+    width: 100%; /* Ocupa a largura total */
+    height: 100vh;
+    background: rgba(30, 47, 35, 0.98); /* Fundo escuro com opacidade */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease-in-out;
+    display: flex; /* Garante que esteja flex para centralizar */
+    padding-top: 80px; /* Espaço para o cabeçalho fixo */
+  }
+  .main-nav.active {
+    right: 0; /* Entra na tela */
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .main-nav ul li {
+    margin: 1.8rem 0; /* Mais espaço vertical */
+    width: 100%;
+    text-align: center;
+  }
+  .main-nav a {
+    font-size: 1.4rem; /* Tamanho maior para facilitar o toque */
+    padding: 0.8rem 0;
+    display: block; /* Garante que o link ocupe toda a largura */
+  }
+  .main-nav a::after {
+    height: 4px; /* Linha de destaque maior em mobile */
+    bottom: 5px;
+  }
+
+  .card {
+    padding: 2rem; /* Padding menor em cards */
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card ul li {
+    font-size: 1rem;
+  }
+
+  .process-tabs {
+    flex-direction: column; /* Abas em coluna */
+    align-items: center;
+  }
+  .tab-link {
+    width: 90%; /* Abas com largura maior */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .accordion-header {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+  }
+  .accordion-content p {
+    padding: 0 1.2rem 1.2rem 1.2rem;
+  }
+  .process-list li {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column; /* Itens de contato em coluna */
+    align-items: center;
+    gap: 1.5rem;
+  }
+  form {
+    padding: 1.5rem;
+  }
+  .social-media a img {
+    height: 40px; /* Ícones sociais um pouco menores */
+  }
+
+  .main-footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .footer-links a {
+    margin: 0 0.8rem; /* Menos espaço entre os links no rodapé */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .card-grid,
+  .service-grid,
+  .team-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    gap: 1rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  .tab-link {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  .accordion-header {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+  .accordion-content p {
+    font-size: 0.9rem;
+  }
+  .main-footer p,
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+}
