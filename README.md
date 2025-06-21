@@ -44,7 +44,7 @@ Para configurar este projeto localmente para desenvolvimento:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/plp-alleuia/tikvah-psycem-website.git](https://github.com/plp-alleluia/tikvah-psycem-website.git)
+    git clone [https://github.com/plp-alleuia/consultoriotikvah.mz.git]([(https://github.com/plp-alleuia/consultoriotikvah.mz.git)
     # Substitua 'plp-alleuia' pelo seu username do GitHub real, se for diferente
     ```
 2.  **Navegue até a pasta do projeto:**
